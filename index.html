@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+  <style>
+    html {
+      overflow-y: auto;
+    }
+    html, body {
+      height: 100%;
+    }
+    #app,
+    .wrapper {
+      min-height: 100%;
+      background-color: gray;
+    }
+    .wrapper {
+      background-color: greenyellow;
+    }
+    .drawer {
+      background-color: orange;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 250px;
+      overflow-y: auto;
+      z-index: 3;
+      -webkit-box-shadow: 4px 0 5px -5px #333333;
+      -moz-box-shadow: 4px 0 5px -5px #333333;
+      box-shadow: 4px 0 5px -5px #333333;
+      will-change: transform;
+      -webkit-transition: transform 0.8s;
+      -moz-transition: transform 0.8s;
+      -o-transition: transform 0.8s;
+      transition: transform 0.8s;
+    }
+    .drawer-toggle {
+      display: none;
+    }
+    .header {
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 55px;
+      z-index: 2;
+    }
+    .main-content {
+      background-color: lightblue;
+      /* Must match header height */
+      padding-top: 55px;
+      z-index: 1
+    }
+    .header,
+    .main-content {
+      will-change: margin-left;
+      /* Duration must match drawer transition duration */
+      -webkit-transition: margin-left 0.8s;
+      -moz-transition: margin-left 0.8s;
+      -o-transition: margin-left 0.8s;
+      transition: margin-left 0.8s;
+      /* Must match drawer width */
+      margin-left: 250px;
+    }
+    @media screen and (max-width: 768px) {
+      .header,
+      .main-content {
+        margin-left: 0;
+      }
+      .drawer {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+      .drawer-toggle {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="wrapper">
+      <header class="header">
+        <a class="button drawer-toggle">Open drawer</a>
+        <h1 class="title is-inline-block">Dashboard</h1>
+      </header>
+
+      <aside class="drawer">
+        <p>First item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Item</p>
+        <p>Last item</p>
+      </aside>
+
+      <section class="main-content">
+        <p>First line</p>
+        <p>A long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph a long paragraph</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Main content</p>
+        <p>Last line</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
