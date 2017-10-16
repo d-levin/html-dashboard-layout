@@ -11,3 +11,11 @@ Below this width, the drawer will be hidden.
 
 ##### Mobile
 ![alt text](./resources/Dashboard_Mobile.png "Dashboard on mobile")
+
+#### Todo
+| Done | Task |
+|---|---|
+|  | Add overlay when drawer is open on mobile |
+|  | Click on overlay to close drawer |
+|  | Prevent scrolling in main content if overlay is present |
+|  | Add button and functionality to toggle drawer |
