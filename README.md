@@ -18,4 +18,4 @@ Below this width, the drawer will be hidden.
 |  | Add overlay when drawer is open on mobile |
 |  | Click on overlay to close drawer |
 |  | Prevent scrolling in main content if overlay is present |
-|  | Add button and functionality to toggle drawer |
+|  | Add functionality to toggle drawer |
