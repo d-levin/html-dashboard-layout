@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
   <style>
-    @font-face {
-
-    }
     html {
       overflow-y: auto;
     }
@@ -60,10 +57,6 @@
     }
     .header-left {
       float: left;
-      display: table;
-    }
-    .header-left > * {
-      vertical-align: middle;
     }
     .header-right {
       float: right;
@@ -73,6 +66,11 @@
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      display: table;
+    }
+    .header-left > *,
+    .header-right > * {
+      vertical-align: middle;
     }
     .header,
     .main-content {
@@ -105,6 +103,9 @@
         -ms-transform: translateX(-100%);
         -o-transform: translateX(-100%);
         transform: translateX(-100%);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
       }
       .drawer-toggle {
         display: inline-block;
