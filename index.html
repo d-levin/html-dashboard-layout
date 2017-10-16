@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
   <style>
+    @font-face {
+
+    }
     html {
       overflow-y: auto;
     }
@@ -45,28 +49,51 @@
       background-color: pink;
       position: fixed;
       top: 0;
-      width: 100%;
+      /* Adjust for drawer */
+      width: calc(100% - 250px);
       height: 55px;
       z-index: 2;
+      padding-left: 1em;
+      padding-right: 1em;
+      overflow: auto;
+      will-change: width, margin-left;
+    }
+    .header-left {
+      float: left;
+    }
+    .header-right {
+      float: right;
+    }
+    .header-left,
+    .header-right {
+      /* Center content vertically in header */
+      -webkit-transform: translateY(25%);
+      -moz-transform: translateY(25%);
+      -ms-transform: translateY(25%);
+      -o-transform: translateY(25%);
+      transform: translateY(25%);
+    }
+    .header,
+    .main-content {
+      /* Duration must match drawer transition duration */
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      transition: all 0.8s;
+      /* Must match drawer width */
+      margin-left: 250px;
     }
     .main-content {
       background-color: lightblue;
       /* Must match header height */
       padding-top: 55px;
-      z-index: 1
-    }
-    .header,
-    .main-content {
+      z-index: 1;
       will-change: margin-left;
-      /* Duration must match drawer transition duration */
-      -webkit-transition: margin-left 0.8s;
-      -moz-transition: margin-left 0.8s;
-      -o-transition: margin-left 0.8s;
-      transition: margin-left 0.8s;
-      /* Must match drawer width */
-      margin-left: 250px;
     }
     @media screen and (max-width: 768px) {
+      .header {
+        width: 100%;
+      }
       .header,
       .main-content {
         margin-left: 0;
@@ -88,8 +115,21 @@
   <div id="app">
     <div class="wrapper">
       <header class="header">
-        <a class="button drawer-toggle">Open drawer</a>
-        <h1 class="title is-inline-block">Dashboard</h1>
+        <div class="header-left">
+          <a class="button is-small drawer-toggle">
+            <span class="icon is-small">
+              <i class="fa fa-bars"></i>
+            </span>
+          </a>
+          <h1 class="title is-inline-block">Dashboard</h1>
+        </div>
+        <div class="header-right">
+          <a class="button is-small">
+            <span class="icon is-small">
+              <i class="fa fa-ellipsis-v"></i>
+            </span>
+          </a>
+        </div>
       </header>
 
       <aside class="drawer">
