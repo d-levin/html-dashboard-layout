@@ -7,19 +7,23 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
   <style>
-    html {
+    html,
+    body {
+      position: fixed;
+      overflow: hidden;
+    }
+    #app {
+      width: 100vw;
+      height: 100vh;
       overflow-y: auto;
-    }
-    html, body {
-      height: 100%;
-    }
-    #app,
-    .wrapper {
-      min-height: 100%;
-      background-color: gray;
-    }
-    .wrapper {
+      -webkit-overflow-scrolling: touch;
       background-color: greenyellow;
+    }
+    .wrapper {
+      background-color: gray;
+      position: relative;
+      height: 100%;
+      width: 100%;
     }
     .drawer {
       background-color: orange;
@@ -44,7 +48,7 @@
     }
     .header {
       background-color: pink;
-      position: fixed;
+      position: absolute;
       top: 0;
       /* Adjust for drawer */
       width: calc(100% - 250px);
@@ -52,7 +56,6 @@
       z-index: 2;
       padding-left: 1rem;
       padding-right: 1rem;
-      overflow: auto;
       will-change: margin-left, width;
     }
     .header-left {
